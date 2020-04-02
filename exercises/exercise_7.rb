@@ -12,6 +12,6 @@ puts "----------"
 # Your code goes here ...
 puts "What's the name of the new store?"
 store_name = gets.chomp
-@new_store = Store.create(name: store_name)
+@new_store = Store.create(name: "#{store_name}")
 errors = @new_store.errors.messages
-errors.each{ |message| puts message }
+puts "Could not create store because, #{errors}"
